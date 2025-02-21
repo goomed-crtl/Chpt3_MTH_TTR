@@ -1,5 +1,11 @@
-// Chpt3_MTH_TTR.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*
+Title: Chapter 3 Exerise 17 - Math Tutor
+File Name: Chpt3_MTH_TTR.cpp
+Programmer: Nicholas Woolston
+Date: 20/02/2024 (DD/MM/YYYY)
+Requirements: Write code that generates 2 random numbers to be added together. Display the numbers to the user and put a break in the code while the user
+gets the answer. Have the answer be displayed after the user presses enter.
+*/
 
 #include <iostream>
 #include <cstdlib>
