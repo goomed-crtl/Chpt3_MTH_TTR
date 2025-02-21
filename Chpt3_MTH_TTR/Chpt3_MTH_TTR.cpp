@@ -11,26 +11,35 @@ int AddBothNums(int num1, int num2);
 
 int main()
 {
-    srand(time(NULL)); 
+    srand(time(NULL));
     int num1 = GetRandNum1();
     int num2 = GetRandNum2();
     int result = AddBothNums(num1, num2);
-    
-    cout << "What is " << num1 << " plus " << num2 << " ?\n";
-    system("pause"); // I had to look this one up. Originally i was just going to use cin to assign a value to nothing. 
-    //Essentially does the same thing, but isntead of waiting for 'enter' it's any key, and you dont assign a random value. 
-    cout << "It's " << result; 
+    int answer;
+    do
+    {
+        cout << "What is " << num1 << " plus " << num2 << " ?\n";
+        cin >> answer;
+        if (answer != result) 
+        {
+            cout << "That's incorrect! Try again!\n"<<endl;
+        }
+        else
+        {
+            cout << "Correct! Great job!";
+        }
+    } while (answer != result); //continues the loop so long as users answer does equal the result
 }
 
 int GetRandNum1()
 {
-    int num1 = rand() % 100;
+    int num1 = rand() % 10; //generates numbers and uses modulo 10 so that they're less than 10 and easy to add.
     return num1;
 }
 
 int GetRandNum2()
 {
-    int num2 = rand() % 100;
+    int num2 = rand() % 10; //generates numbers and uses modulo 10 so that they're less than 10 and easy to add.
     return num2;
 }
 
